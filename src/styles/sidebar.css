@@ -1,8 +1,13 @@
 .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 225px;
   max-width: 225px;
   background: linear-gradient(180deg, var(--primary-dark), var(--primary));
   color: #fff;
   min-height: 100vh;
+  z-index: 1000;
 }
 
 .sidebarheader {
@@ -45,4 +50,16 @@
 .sidebar nav a:visited {
   color: white;
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+    .sidebar.open {
+    transform: translateX(0);
+  }
+
 }

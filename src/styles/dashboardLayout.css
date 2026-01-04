@@ -4,8 +4,32 @@
 }
 
 .dashboard-content {
+  margin-left: 225px;
   flex: 1;
   padding: 20px;
   background-color: lightpink;
-  border:5px dashed blue;
+  border: 5px dashed blue;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
 }
