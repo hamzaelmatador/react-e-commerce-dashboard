@@ -1,5 +1,5 @@
 .sidebar {
-  width: 220px;
+  max-width: 225px;
   background: linear-gradient(180deg, var(--primary-dark), var(--primary));
   color: #fff;
   min-height: 100vh;
