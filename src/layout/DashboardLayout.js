@@ -1,20 +1,33 @@
-import Sidebar from './Sidebar';
+import Sidebar from "./Sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from 'react';
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
-import '../styles/dashboardLayout.css';
+import "../styles/dashboardLayout.css";
 
 function DashboardLayout({ children }) {
-
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="dashboard-layout">
-      <Sidebar isOpen={sidebarOpen} closeSidebar={() => setSidebarOpen(false)}/>
-      <div className="dashboard-content"  >
-        <button className="menu-btn" onClick={() => {setSidebarOpen(!sidebarOpen)}}>
-           <FontAwesomeIcon icon={faBars} />
+      <Sidebar
+        isOpen={sidebarOpen}
+        closeSidebar={() => setSidebarOpen(false)}
+      />
+      <div className="dashboard-content">
+        <button
+          className="menu-btn"
+          onClick={() => {
+            setSidebarOpen(!sidebarOpen);
+          }}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+        <button
+          className={`sidebar-close-btn ${sidebarOpen ? "active" : ""}`}
+          onClick={() => setSidebarOpen(false)}
+        >
+          <FontAwesomeIcon icon={faX} />
         </button>
         {children}
         <h1>Hello</h1>

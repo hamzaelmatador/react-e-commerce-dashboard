@@ -7,7 +7,7 @@
   margin-left: 225px;
   flex: 1;
   padding: 20px;
-  background-color: lightpink;
+  background-color: #f0f5f3;
   border: 5px dashed blue;
 }
 
@@ -15,15 +15,28 @@
   display: none;
   background: none;
   border: none;
-  font-size: 22px;
+  font-size: 29px;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.sidebar-close-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: var(--primary);
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 
-
-
-
 @media (max-width: 768px) {
-
   .dashboard-content {
     margin-left: 0;
     width: 100%;
@@ -31,5 +44,10 @@
 
   .menu-btn {
     display: block;
+  }
+
+  .sidebar-close-btn.active {
+    display: block;
+    opacity: 1;
   }
 }

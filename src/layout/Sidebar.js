@@ -12,46 +12,77 @@ import {
   faCannabis,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Sidebar({isOpen , closeSidebar}) {
+function Sidebar({ isOpen, closeSidebar }) {
   return (
-    <aside className={`sidebar ${isOpen ? "open" : ""} `}>
+    <aside className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebarheader">
         <FontAwesomeIcon icon={faCannabis} className="logo-icon" />
-        <h2>Cris<span>Weed</span></h2>
+        <h2>
+          Cris<span>Weed</span>
+        </h2>
       </div>
 
       <nav>
-        <NavLink to="/" end onClick={closeSidebar} >
+        <NavLink
+          to="/"
+          end
+          onClick={closeSidebar}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <FontAwesomeIcon icon={faTachometerAlt} />
           <p>Dashboard</p>
         </NavLink>
 
-        <NavLink to="/products" onClick={closeSidebar}>
+        <NavLink
+          to="/products"
+          onClick={closeSidebar}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <FontAwesomeIcon icon={faShoppingBag} />
           <p>Products</p>
         </NavLink>
 
-        <NavLink to="/orders" onClick={closeSidebar}>
+        <NavLink
+          to="/orders"
+          onClick={closeSidebar}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <FontAwesomeIcon icon={faShoppingCart} />
           <p>Orders</p>
         </NavLink>
 
-        <NavLink to="/customers" onClick={closeSidebar}>
+        <NavLink
+          to="/customers"
+          onClick={closeSidebar}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <FontAwesomeIcon icon={faUsers} />
           <p>Customers</p>
         </NavLink>
 
-        <NavLink to="/analytics" onClick={closeSidebar} >
+        <NavLink
+          to="/analytics"
+          onClick={closeSidebar}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <FontAwesomeIcon icon={faChartBar} />
           <p>Analytics</p>
         </NavLink>
 
-        <NavLink to="/categories" onClick={closeSidebar} >
+        <NavLink
+          to="/categories"
+          onClick={closeSidebar}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <FontAwesomeIcon icon={faTags} />
           <p>Categories</p>
         </NavLink>
 
-        <NavLink to="/settings" onClick={closeSidebar}>
+        <NavLink
+          to="/settings"
+          onClick={closeSidebar}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <FontAwesomeIcon icon={faCog} />
           <p>Settings</p>
         </NavLink>
