@@ -21,9 +21,9 @@
 }
 
 .sidebar-close-btn {
-  display: none;
+  visibility: hidden;
   position: fixed;
-  top: 16px;
+  top: 26px;
   right: 16px;
   background: transparent;
   border: none;
@@ -32,9 +32,10 @@
   cursor: pointer;
   z-index: 1000;
   opacity: 0;
-  transition: opacity 0.3s ease;
-}
+  transform: translateX(50px);
 
+  transition: transform .3s ease, opacity .3s ease;
+}
 
 @media (max-width: 768px) {
   .dashboard-content {
@@ -47,7 +48,9 @@
   }
 
   .sidebar-close-btn.active {
-    display: block;
+    visibility: visible;
+    transform: translateX(0);
     opacity: 1;
+    
   }
 }
